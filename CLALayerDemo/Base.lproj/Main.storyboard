@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,111 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CLALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3R-s3-puF">
+                                <rect key="frame" x="135" y="724" width="144" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="1dl-1g-GZ6"/>
+                                    <constraint firstAttribute="width" constant="144" id="Ifr-n0-kNP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tap me!">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHz-zv-Y4e"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prog" translatesAutoresizingMaskIntoConstraints="NO" id="K4G-9f-um2">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.71427406022100615" green="0.85391211335936834" blue="0.94840360530699142" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="K4G-9f-um2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Gxk-Kh-k4U"/>
+                            <constraint firstItem="b3R-s3-puF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SrI-hx-cfT"/>
+                            <constraint firstItem="K4G-9f-um2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="bEA-1i-oIE"/>
+                            <constraint firstItem="K4G-9f-um2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="efM-V9-Yz0"/>
+                            <constraint firstItem="K4G-9f-um2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.267857" id="i0U-Wl-fri"/>
+                            <constraint firstItem="b3R-s3-puF" firstAttribute="top" secondItem="K4G-9f-um2" secondAttribute="bottom" constant="151" id="wd4-1D-gAD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="b3R-s3-puF" id="3Fg-U0-Sfx"/>
+                        <outlet property="imageView" destination="K4G-9f-um2" id="lYw-BD-13q"/>
+                        <segue destination="JqU-Ef-Nqi" kind="show" identifier="showSecondScreen" id="9y6-fa-A3g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="79.6875"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Jay-Fc-znE">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="JqU-Ef-Nqi" customClass="SecondViewController" customModule="CLALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oGH-tq-ijI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="3dy-6R-4hN">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnY-yW-PkY">
+                                <rect key="frame" x="90" y="721" width="234" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="UEk-bh-8wg"/>
+                                    <constraint firstAttribute="height" constant="75" id="uYQ-jj-Zm3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Take the cap">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAo-6o-Ua5"/>
+                        <color key="backgroundColor" red="0.71372550729999995" green="0.85490196939999996" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3dy-6R-4hN" firstAttribute="centerY" secondItem="dAo-6o-Ua5" secondAttribute="centerY" id="58l-E2-0ie"/>
+                            <constraint firstItem="KnY-yW-PkY" firstAttribute="centerX" secondItem="dAo-6o-Ua5" secondAttribute="centerX" id="ECw-KZ-zrP"/>
+                            <constraint firstItem="3dy-6R-4hN" firstAttribute="width" secondItem="oGH-tq-ijI" secondAttribute="width" multiplier="0.57971" id="Ws7-RY-siA"/>
+                            <constraint firstItem="KnY-yW-PkY" firstAttribute="top" secondItem="3dy-6R-4hN" secondAttribute="bottom" constant="148" id="Yug-tH-JYm"/>
+                            <constraint firstItem="3dy-6R-4hN" firstAttribute="centerX" secondItem="dAo-6o-Ua5" secondAttribute="centerX" id="is8-Km-5eq"/>
+                            <constraint firstItem="3dy-6R-4hN" firstAttribute="height" secondItem="oGH-tq-ijI" secondAttribute="height" multiplier="0.267857" id="okl-pc-mvr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jIm-sb-Ka1"/>
+                    <connections>
+                        <outlet property="button" destination="KnY-yW-PkY" id="5XN-M6-ZQ7"/>
+                        <outlet property="imageView" destination="3dy-6R-4hN" id="IcT-Vw-RWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4XV-Gl-Gju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724.63768115942037" y="79.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cup" width="626" height="626"/>
+        <image name="prog" width="626" height="626"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

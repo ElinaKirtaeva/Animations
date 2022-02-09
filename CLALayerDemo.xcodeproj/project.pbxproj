@@ -14,6 +14,7 @@
 		30C374B827B2BAE7003C4E42 /* CLALayerDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30C374B627B2BAE7003C4E42 /* CLALayerDemo.xcdatamodeld */; };
 		30C374BA27B2BAE9003C4E42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C374B927B2BAE9003C4E42 /* Assets.xcassets */; };
 		30C374BD27B2BAE9003C4E42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C374BB27B2BAE9003C4E42 /* LaunchScreen.storyboard */; };
+		30C374C527B2BBC3003C4E42 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C374C427B2BBC3003C4E42 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		30C374B927B2BAE9003C4E42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C374BC27B2BAE9003C4E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30C374BE27B2BAE9003C4E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C374C427B2BBC3003C4E42 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				30C374AD27B2BAE7003C4E42 /* AppDelegate.swift */,
 				30C374AF27B2BAE7003C4E42 /* SceneDelegate.swift */,
 				30C374B127B2BAE7003C4E42 /* ViewController.swift */,
+				30C374C427B2BBC3003C4E42 /* SecondViewController.swift */,
 				30C374B327B2BAE7003C4E42 /* Main.storyboard */,
 				30C374B927B2BAE9003C4E42 /* Assets.xcassets */,
 				30C374BB27B2BAE9003C4E42 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				30C374B227B2BAE7003C4E42 /* ViewController.swift in Sources */,
 				30C374AE27B2BAE7003C4E42 /* AppDelegate.swift in Sources */,
 				30C374B027B2BAE7003C4E42 /* SceneDelegate.swift in Sources */,
+				30C374C527B2BBC3003C4E42 /* SecondViewController.swift in Sources */,
 				30C374B827B2BAE7003C4E42 /* CLALayerDemo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
